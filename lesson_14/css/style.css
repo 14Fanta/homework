@@ -1,0 +1,140 @@
+html {
+	box-sizing: inherit;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1740px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.header {
+}
+
+.menu {
+	/* display: flex; */
+	/* justify-content: space-between; */
+	/* align-items: center; Добавляем это свойство */
+	text-transform: uppercase;
+}
+
+.menu-list {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	gap: 5px;
+}
+
+.menu-element {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.header__logo {
+	display: flex;
+	align-items: center;
+	font-size: larger;
+}
+
+.header__logo-title {
+}
+
+.header__logo-title_top {
+	width: 100px;
+}
+
+.header__logo-title_logo {
+	width: 16px;
+}
+
+.header__free_visit {
+}
+
+.header__free_visit-text {
+	color: gray;
+}
+
+.header__free_visit-tel {
+	display: flex;
+	align-self: end;
+	font-weight: bold;
+}
+
+.main {
+}
+
+.main-new_branch {
+}
+
+.main-new_branch--title {
+}
+
+.main-new_branch--text {
+}
+.main-fitness_club {
+}
+.main-fitness_club__allocation-link {
+	color: #3399cc;
+}
+.main-fitness_club__trainers {
+}
+.main__img-gym {
+}
+.main-group_activities {
+}
+.main-group_activities-title {
+}
+.main-group_classes-text {
+}
+.main-group_classes-different_activities {
+}
+.main-group_classes-different_activities__list {
+}
+.main-group_classes-different_activities__element {
+}
+.main-review {
+}
+.main-review--title {
+}
+.main-review-text {
+}
+.footer-nav {
+}
+.footer-nav--list {
+}
+.footer-nav--element {
+}
+.footer-nav--link {
+}
