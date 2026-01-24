@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+caption{
+  border-bottom: none;
+}
+
+table,th,tr,td,caption{
+  border: 1px solid #000;
+}
+
+.table{
+  margin: 25px 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.bold_text{
+  font-weight: 700;
+}
+
+.table-head{
+  text-transform: uppercase;
+}
+
+.red_text {
+  color:red;
+}
