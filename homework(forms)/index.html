@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Домашнее задание по формам</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<form class="form">
+			<fieldset class="form__group">
+				<h3 class="form__group--title">Ваши личные данные</h3>
+					<label for="name">Ваше имя</label>
+					<input id="name" type="text" placeholder="Имя" required/>
+					<label>
+						Ваш возраст
+						<input type="number" inputmode="numeric" placeholder="Возраст" />
+					</label>
+					<label for="number_tel">Ваш номер телефона</label>
+					<input
+						id="number_tel"
+						type="tel"
+						inputmode="tel"
+						placeholder="Номер телефона"
+            required
+					/>
+					<label>
+						Ваша почта
+						<input type="email" inputmode="email" placeholder="Почта" />
+					</label>
+					<label for="message_additionally">Сообщение</label>
+					<textarea name="message_additionally" id="message_additionally" placeholder="Ваше сообщение"></textarea>
+					<label class="label_last">
+						<input class="checkbox_agree" type="checkbox" required />
+						Я принимаю правила
+					</label>
+				<button class="button" type="submit">Отправить</button>
+			</fieldset>
+		</form>
+	</body>
+</html>

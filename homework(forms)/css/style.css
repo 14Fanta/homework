@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+input,
+label,
+form,
+textarea {
+	font-size: 22px;
+}
+
+form {
+	margin: 10px 10px;
+}
+
+.form__group {
+	display: inline;
+	border-radius: 2%;
+	padding-right: 80px;
+}
+
+h3 {
+	margin: 0;
+}
+
+label {
+	margin-top: 5px;
+}
+
+input,
+textarea {
+	border-radius: 4px;
+}
+
+label,
+input {
+	display: block;
+}
+
+.label_last input {
+	display: inline;
+}
+
+textarea {
+	resize: vertical;
+	max-height: 150px;
+}
+
+.checkbox_agree {
+	cursor: pointer;
+}
+
+.button {
+	cursor: pointer;
+}
