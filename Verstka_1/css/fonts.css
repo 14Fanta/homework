@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Ubuntu';
+	src: local('UbuntuLight'),url('../fonts/Ubuntu/UbuntuLight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: local('UbuntuMedium'),url('../fonts/Ubuntu/UbuntuMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: local('UbuntuRegular'),url('../fonts/Ubuntu/UbuntuRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: local('OswaldMedium'),url('../fonts/Oswald/OswaldMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: local('OswaldSemiBold'),url('../fonts/Oswald/OswaldSemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
