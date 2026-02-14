@@ -1,10 +1,23 @@
-* {
+@import url('./fonts.css');
+
+html {
+	scrollbar-width: thin;
+}
+
+*,
+*::after,
+*::before {
 	box-sizing: border-box;
 }
 
 body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 	margin: 0;
-	font-family: sans-serif;
+	font-family: Roboto-Medium, sans-serif;
+	/* background-color: #333; */
 }
 
 input,
@@ -15,10 +28,15 @@ textarea {
 }
 
 form {
+  border: 1px solid black;
+	width: 100%;
+	max-width: 400px;
 	margin: 10px 10px;
+	padding: 30px;
 }
 
 .form__group {
+  border:none;
 	display: inline;
 	border-radius: 2%;
 	padding-right: 80px;
@@ -29,21 +47,29 @@ h3 {
 }
 
 label {
-	margin-top: 5px;
+	display: inline-block;
+	margin: 10px 0;
 }
 
 input,
 textarea {
-	border-radius: 4px;
+	outline: none;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+input:disabled,
+textarea:disabled {
+	opacity: 0.7;
 }
 
 label,
-input {
-	display: block;
+textarea {
+	width: 100%;
 }
 
-.label_last input {
-	display: inline;
+input {
+	display: block;
 }
 
 textarea {
@@ -51,10 +77,70 @@ textarea {
 	max-height: 150px;
 }
 
-.checkbox_agree {
-	cursor: pointer;
+.label_last{
+  padding-left: 22px;
+
 }
 
-.button {
+.checkbox_agree {
+	display: inline;
+	appearance: none;
+  position: absolute;
 	cursor: pointer;
+	accent-color: #ae45ff;
+  outline:none;
+}
+
+.checkbox_agree:checked::after{
+  content:"";
+  background: url(../src/images/check-icon.svg) no-repeat center,#ae45ff;
+  
+}
+
+.checkbox_agree:focus-visible:after{
+  outline:2px solid #ae45ff;
+  outline-offset: 1px;
+}
+
+.checkbox_agree::after{
+  content:"";
+  position: absolute;
+  margin: 4px -22px;
+  width: 16px;
+  height: 16px;
+  border:1px solid #333;
+	cursor: pointer;
+  border-radius: 4px;
+}
+
+.button_submit {
+	border: none;
+	padding: 6px 18px;
+	border-radius: 6px;
+	background-color: #ae45ff;
+	color: white;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.button_submit:not(:disabled):hover {
+	color: #000;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	opacity: 0.85;
+}
+
+.button_submit:not(:disabled):active {
+	background-color: #8719db;
+}
+
+.button_submit:disabled {
+	opacity: 0.7;
+	cursor: default;
+}
+
+textarea:focus-visible,
+input:not(.checkbox_agree):focus-visible,
+button:focus-visible {
+	outline-offset: 1px;
+	outline: 2px solid #ae45ff;
 }
