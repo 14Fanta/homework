@@ -1,0 +1,64 @@
+.header{
+  padding: 30px 0 ;
+  margin-bottom: 80px;
+}
+
+.top__inner {
+  padding: 0 0 30px;
+	display: flex;
+	border-bottom: 1px solid #d3cbd9;;
+  gap: 10px;
+}
+
+.fit{
+  display: block;
+}
+
+.fit::after{
+  content:url('../images/logo.svg');
+
+}
+
+.logo {
+	text-transform: uppercase;
+	font-size: 21.68px;
+}
+
+.logo_studio {
+	display: block;
+	font-size: 22.04px;
+}
+
+.free_visit {
+	text-transform: uppercase;
+	margin-left: auto;
+}
+
+.free_visit>a{
+  display: block;
+	font-weight: 500;
+	font-size: 18px;
+  text-align: right;
+	margin-top: 8px;
+	color: #2C332F  ;
+  transition: all .3s;
+}
+
+.free_visit>a:hover{
+  text-decoration: underline;
+  color:#3596ed;
+}
+/* .free_visit>a:hover{
+  border-bottom: 1px solid #3596ed ;
+} */
+
+
+.free_visit-text {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 4%;
+	color: #858e8a;
+  margin-bottom: 8px;
+}
+
+

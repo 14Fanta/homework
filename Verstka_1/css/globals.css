@@ -1,0 +1,38 @@
+html {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.container {
+	max-width: 1250px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
