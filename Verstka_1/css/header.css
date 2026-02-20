@@ -1,22 +1,21 @@
-.header{
-  padding: 30px 0 ;
-  margin-bottom: 80px;
+.header {
+	padding: 30px 0;
+	margin-bottom: 80px;
 }
 
 .top__inner {
-  padding: 0 0 30px;
+	padding: 0 0 30px;
 	display: flex;
-	border-bottom: 1px solid #d3cbd9;;
-  gap: 10px;
+	border-bottom: 1px solid #d3cbd9;
+	gap: 10px;
 }
 
-.fit{
-  display: block;
+.fit {
+	display: block;
 }
 
-.fit::after{
-  content:url('../images/logo.svg');
-
+.fit::after {
+	content: url('../images/svg/logo.svg');
 }
 
 .logo {
@@ -34,31 +33,17 @@
 	margin-left: auto;
 }
 
-.free_visit>a{
-  display: block;
+.free_visit > a {
+	display: block;
 	font-weight: 500;
 	font-size: 18px;
-  text-align: right;
+	text-align: right;
 	margin-top: 8px;
-	color: #2C332F  ;
-  transition: all .3s;
+	color: #2c332f;
+	transition: all 0.3s;
 }
 
-.free_visit>a:hover{
-  text-decoration: underline;
-  color:#3596ed;
+.free_visit > a:hover {
+	text-decoration: underline;
+	color: #3596ed;
 }
-/* .free_visit>a:hover{
-  border-bottom: 1px solid #3596ed ;
-} */
-
-
-.free_visit-text {
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 4%;
-	color: #858e8a;
-  margin-bottom: 8px;
-}
-
-

@@ -36,3 +36,30 @@ a {
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+.section {
+	margin-bottom: 140px;
+}
+
+.title-large {
+	font-family: Oswald, sans-serif;
+	font-weight: 600;
+	line-height: 115%;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	font-size: 48px;
+	color: #2c332f;
+	max-width: 596px;
+}
+
+.article-title-medium {
+	font-size: 36px;
+}
+
+.text-sub {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 4%;
+	color: #858e8a;
+	margin-bottom: 8px;
+}

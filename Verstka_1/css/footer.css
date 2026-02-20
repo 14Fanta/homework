@@ -52,3 +52,12 @@
 	color: #858e8a;
 	text-align: center;
 }
+
+footer a{
+  transition:all 0.3s;
+}
+
+footer a:not(.logo):hover{
+  text-decoration: underline;
+  color:#3596ed;
+}

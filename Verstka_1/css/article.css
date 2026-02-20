@@ -44,16 +44,6 @@
 	padding-top: 80px;
 }
 
-.article-title-large {
-	max-width: 596px;
-	font-size: 48px;
-}
-
-.article-title-medium {
-	max-width: 596px;
-	font-size: 36px;
-}
-
 .play {
 	position: absolute;
 	left: 580px;
@@ -65,15 +55,6 @@
 	z-index: -1;
 	top: 100px;
 	left: -350px;
-}
-
-.article-title {
-	font-family: Oswald, sans-serif;
-	font-weight: 600;
-	line-height: 115%;
-	text-transform: uppercase;
-	color: #2c332f;
-	margin-bottom: 40px;
 }
 
 .article-text {
@@ -93,7 +74,7 @@
 	top: 100px;
 	left: -350px;
 	z-index: -1;
-	content: url('../images/декор 2.svg');
+	content: url('../images/svg/декор 2.svg');
 }
 
 .article-decor-wrapper-2::before {
@@ -102,8 +83,8 @@
 	/* top: 328px; */
 	right: -350px;
 	z-index: -1;
-	content: url('../images/декор 2.svg');
-}
+	content: url('../images/svg/декор 2.svg');
+}                                                 
 
 .article-mb {
 	margin-bottom: 80px;
