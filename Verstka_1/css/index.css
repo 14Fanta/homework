@@ -113,6 +113,14 @@ html {
 	background-color: var(--accent);
 	color: #fff;
 	margin-bottom: 140px;
+	transition: all 0.3s;
+}
+
+.program_btn-btn:hover {
+	/* padding: 21px 34px;  */
+	/* opacity:0.8; */
+	background-color: #358edc;
+	box-shadow: inset 0 0 5px black;
 }
 
 .last_news-title {
@@ -130,16 +138,20 @@ html {
 }
 
 .card {
+	display: flex;
+  justify-content: space-between;
+	flex-direction: column;
 	border: 1px solid #d3cbd9;
 	overflow: hidden;
 }
 
 .card-content {
 	padding: 20px;
+  margin-top: auto;
 	font-weight: 400;
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: column;
+	display: inline-flex;
+	align-items: flex-start;
+  flex-direction: column;
 	max-width: 284px;
 	min-height: 139px;
 }
@@ -160,8 +172,8 @@ html {
 }
 
 .card-link {
-	display: inline-flex;
-	align-items: center;
+	display: flex;
+	align-items: baseline;
 	gap: 9px;
 	font-weight: inherit;
 	color: var(--accent);
@@ -184,6 +196,10 @@ article.card > div.card-content a.card-link::after {
 
 .card-link:hover::after {
 	transform: translateX(5px);
+}
+
+.card-content > a:hover {
+	text-decoration: underline;
 }
 
 .card-arrow {
