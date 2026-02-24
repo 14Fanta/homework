@@ -43,6 +43,14 @@
 	margin-bottom: 40px;
 }
 
+.footer__menu {
+	display: flex;
+	justify-content: center;
+	max-width: 733px;
+	gap: 60px;
+	margin-bottom: 40px;
+}
+
 .copyright {
 	font-size: 14px;
   padding-top: 40px;

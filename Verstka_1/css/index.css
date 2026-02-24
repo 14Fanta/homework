@@ -24,10 +24,11 @@ html {
 	content: '';
 	background: url('../images/svg/декор.svg') repeat-x;
 	height: 48px;
-	width: 100%;
+	width: 100vw;
 	position: absolute;
 	top: 360px;
 	z-index: -1;
+	left: 0;
 }
 
 .fitnes_body-text {
@@ -139,7 +140,7 @@ html {
 
 .card {
 	display: flex;
-  justify-content: space-between;
+	justify-content: space-between;
 	flex-direction: column;
 	border: 1px solid #d3cbd9;
 	overflow: hidden;
@@ -147,11 +148,11 @@ html {
 
 .card-content {
 	padding: 20px;
-  margin-top: auto;
+	margin-top: auto;
 	font-weight: 400;
 	display: inline-flex;
 	align-items: flex-start;
-  flex-direction: column;
+	flex-direction: column;
 	max-width: 284px;
 	min-height: 139px;
 }
@@ -169,8 +170,12 @@ html {
 	line-height: 130%;
 	font-size: 16px;
 	margin-bottom: 12px;
+	overflow: hidden;
+	width: 244px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
-
 .card-link {
 	display: flex;
 	align-items: baseline;
