@@ -1,13 +1,15 @@
 .header {
 	padding: 30px 0 0;
-	/* margin-bottom: 80px; */
 }
 
 .top__inner {
 	padding: 0 0 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	border-bottom: 1px solid #d3cbd9;
 	gap: 10px;
+	margin-bottom: 80px;
 }
 
 .fit {
@@ -40,10 +42,24 @@
 	text-align: right;
 	margin-top: 8px;
 	color: #2c332f;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
 .free_visit > a:hover {
 	text-decoration: underline;
 	color: #3596ed;
+}
+
+@media (width <=768px) {
+	.top__inner {
+		margin-bottom: 80px;
+	}
+}
+
+@media (width <= 576px) {
+	.top__inner {
+		margin-bottom: 60px;
+	}
 }
