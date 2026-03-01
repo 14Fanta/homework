@@ -192,7 +192,9 @@ section.hero.section a {
 	transition: -webkit-transform 0.3s;
 	-o-transition: transform 0.3s;
 	transition: transform 0.3s;
-	transition: transform 0.3s, -webkit-transform 0.3s;
+	transition:
+		transform 0.3s,
+		-webkit-transform 0.3s;
 	transition:
 		transform 0.3s,
 		-webkit-transform 0.3s;
@@ -217,9 +219,9 @@ section.hero.section a {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
 	gap: 30px;
 }
 
@@ -317,6 +319,7 @@ summary::-webkit-details-marker {
 /* Adaptation */
 
 @media (width <= 1440px) {
+
 	.hero-images {
 		width: 50%;
 	}
@@ -375,6 +378,11 @@ summary::-webkit-details-marker {
 		width: 100%;
 	}
 
+
+  .faq{
+    width: 100%;
+  }
+
 	.faq::before {
 		display: none;
 	}
@@ -388,12 +396,21 @@ summary::-webkit-details-marker {
 		-ms-flex-direction: column-reverse;
 		flex-direction: column-reverse;
 	}
+
+  .question-container{
+    width: 100%;
+  }
+
 }
 
 @media (width <= 768px) {
-  .hero{
-    margin-bottom: 70px;
-  }
+	.hero {
+		margin-bottom: 70px;
+	}
+
+	.hero-images {
+		width: 100%;
+	}
 
 	.hero-content {
 		max-width: 410px;
@@ -413,6 +430,10 @@ summary::-webkit-details-marker {
 	/* Hero */
 	.hero {
 		padding-top: 60px;
+	}
+
+	.hero-images {
+		width: 100%;
 	}
 
 	.hero h1 {
