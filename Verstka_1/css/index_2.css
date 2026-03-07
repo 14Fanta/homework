@@ -10,24 +10,24 @@
 	width: 100%;
 }
 
-.hero-container {
+.hero__container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	gap: 28px;
 }
 
-.hero-content--title {
+.hero__content-title {
 	max-width: 492px;
 	font-weight: 600;
 	font-size: 62px;
 }
 
-.hero-content--title > strong {
+.hero__content--color--accent {
 	font-weight: 600;
 }
 
-.hero p.hero-images__btn.p {
+.hero > .hero__container > .hero__images > .hero__images-btn {
 	-webkit-transition:
 		opacity 0.3s,
 		background-color 0.2s;
@@ -40,25 +40,25 @@
 	cursor: pointer;
 }
 
-.hero p.hero-images__btn.p:not(:disabled):hover {
+.hero__images-btn.p:not(:disabled):hover {
 	background-color: #3596ed;
 }
 
-p.hero-images__btn:focus-visible {
+.hero__images-btn.p :focus-visible {
 	outline: 2px solid #2b77ba;
 	outline-offset: 2px;
 }
 
-p.hero-images__btn:focus-visible {
+.hero__images-btn.p :focus-visible {
 	outline: none;
 }
 
-div.hero-content p.text {
+div.hero__content p.text {
 	margin-bottom: 140px;
 	max-width: 439px;
 }
 
-.button {
+.hero__content-link {
 	display: inline-block;
 	-webkit-transition:
 		opacity 0.3s,
@@ -71,11 +71,11 @@ div.hero-content p.text {
 		background-color 0.3s;
 }
 
-.button:not(:disabled):hover {
+.hero__content-link:not(:disabled):hover {
 	opacity: 0.85;
 }
 
-.button:not(:disabled):active {
+.hero__content-link:not(:disabled):active {
 	background-color: #2a76ad;
 }
 
@@ -90,11 +90,11 @@ section.hero.section a {
 	text-transform: uppercase;
 }
 
-.hero-images {
+.hero__images {
 	position: relative;
 }
 
-.hero-images__btn {
+.hero__images-btn {
 	position: absolute;
 	top: 62px;
 	left: 50%;
@@ -112,14 +112,14 @@ section.hero.section a {
 	max-width: 161px;
 }
 
-.news-container {
+.news__container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	gap: 28px;
 }
 
-.card {
+.news__card {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -135,31 +135,31 @@ section.hero.section a {
 	overflow: hidden;
 }
 
-.card footer {
+.news__card footer {
 	margin-top: auto;
 	padding: 0 21px 21px;
 }
 
-.news-info {
+.news__card-info {
 	padding: 21px 21px 0;
 }
 
-.card img {
+.news__card-card_header {
+	margin-bottom: 12px;
+}
+
+.news__card img {
 	display: block;
 }
 
-.card time {
+.news__card time {
 	font-weight: 300;
 	color: #858e8a;
 	font-size: 14px;
 	letter-spacing: 0.04em;
 }
 
-.card-header {
-	margin-bottom: 12px;
-}
-
-.card h3 {
+.news__card h3 {
 	padding-top: 8px;
 	font-size: 16px;
 	line-height: 130%;
@@ -172,7 +172,7 @@ section.hero.section a {
 	-webkit-box-orient: vertical;
 }
 
-.card a {
+.news__card a {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -182,7 +182,7 @@ section.hero.section a {
 	gap: 8px;
 }
 
-.card > footer.card-footer a::after {
+.news__card > footer.card-footer a::after {
 	content: '';
 	display: inline-block;
 	width: 22px;
@@ -200,7 +200,7 @@ section.hero.section a {
 		-webkit-transform 0.3s;
 }
 
-.card > footer.card-footer a:hover::after {
+.news__card > footer.card-footer a:hover::after {
 	-webkit-transform: translateX(3px);
 	-ms-transform: translateX(3px);
 	transform: translateX(3px);
@@ -215,7 +215,7 @@ section.hero.section a {
 	min-height: 55px;
 }
 
-.faq-container {
+.faq__container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -229,14 +229,14 @@ section.hero.section a {
 	top: 215px;
 }
 
-.question-title {
+.faq__question-title {
 	font-weight: 500;
 	line-height: 115%;
 	font-size: 24px;
 	text-transform: uppercase;
 }
 
-.question-container {
+.question__container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -297,7 +297,7 @@ summary {
 	user-select: none;
 }
 
-summary.question-title {
+summary.faq__title  {
 	max-width: 631px;
 }
 
@@ -319,9 +319,20 @@ summary::-webkit-details-marker {
 /* Adaptation */
 
 @media (width <= 1440px) {
-
-	.hero-images {
+	.hero__images {
 		width: 50%;
+	}
+}
+
+@media (width <= 1250px) {
+	.hero::before {
+		display: none;
+	}
+
+	.hero__images {
+		display: flex;
+		justify-content: center;
+		width: 100%;
 	}
 }
 
@@ -330,7 +341,7 @@ summary::-webkit-details-marker {
 		display: none;
 	}
 
-	.hero-container {
+	.hero__container {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
@@ -340,16 +351,16 @@ summary::-webkit-details-marker {
 		align-items: center;
 	}
 
-	.hero-content {
+	.hero__content {
 		text-align: center;
 	}
 
-	.hero h1 {
+	.hero__content-title{
 		margin-bottom: 30px;
 		font-size: 52px;
 	}
 
-	div.hero-content p.text {
+	div.hero__content p.text {
 		margin-bottom: 40px;
 	}
 
@@ -359,7 +370,7 @@ summary::-webkit-details-marker {
 		justify-content: center;
 	}
 
-	.news-container {
+	.news__container {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		gap: 20px;
@@ -368,26 +379,25 @@ summary::-webkit-details-marker {
 		justify-content: center;
 	}
 
-	.card {
+	.news__card {
 		-ms-flex-preferred-size: 50%;
 		flex-basis: 50%;
 		max-width: 350px;
 	}
 
-	.card-header img {
+	.news__card-card_header img {
 		width: 100%;
 	}
 
-
-  .faq{
-    width: 100%;
-  }
+	.faq {
+		width: 100%;
+	}
 
 	.faq::before {
 		display: none;
 	}
 
-	.faq-container {
+	.faq__container {
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
@@ -397,10 +407,9 @@ summary::-webkit-details-marker {
 		flex-direction: column-reverse;
 	}
 
-  .question-container{
-    width: 100%;
-  }
-
+	.question__container {
+		width: 100%;
+	}
 }
 
 @media (width <= 768px) {
@@ -408,11 +417,11 @@ summary::-webkit-details-marker {
 		margin-bottom: 70px;
 	}
 
-	.hero-images {
+	.hero__images {
 		width: 100%;
 	}
 
-	.hero-content {
+	.hero__content {
 		max-width: 410px;
 	}
 
@@ -421,7 +430,7 @@ summary::-webkit-details-marker {
 		max-width: inherit;
 	}
 
-	details summary.question-title {
+	details summary.faq__title  {
 		font-size: 22px;
 	}
 }
@@ -432,42 +441,42 @@ summary::-webkit-details-marker {
 		padding-top: 60px;
 	}
 
-	.hero-images {
+	.hero__images {
 		width: 100%;
 	}
 
-	.hero h1 {
+	.hero__content-title {
 		font-size: 42px;
 	}
 
-	.hero-content {
+	.hero__content {
 		max-width: 410px;
 	}
 
-	.hero-images__btn {
+	.hero__images-btn {
 		top: 20px;
 		font-size: 13px;
 		padding: 10px;
 	}
 
-	h2.questions-title {
+	h2.faq__title{
 		font-size: 38px;
 	}
 
-	details summary.question-title {
+	details summary.faq-title  {
 		font-size: 18px;
 	}
 }
 
 @media (width <= 414px) {
-	.hero-images__btn {
+	.hero__images-btn {
 		font-size: 10px;
 		padding: 10px;
 	}
 }
 
 @media (width <= 375px) {
-	.hero-images__btn {
+	.hero__images-btn {
 		max-width: 125px;
 		font-size: 8px;
 		padding: 12px;

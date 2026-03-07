@@ -95,6 +95,19 @@ a {
 	margin-bottom: 140px;
 }
 
+.logo-link {
+	text-transform: uppercase;
+	font-size: 21.68px;
+}
+
+.logo-link--accent{
+	display: block;
+}
+
+.logo-link--accent::after {
+	content: url('../images/svg/logo.svg');
+}
+
 .title-large {
 	font-family: var(--Oswald-family);
 	font-weight: 600;

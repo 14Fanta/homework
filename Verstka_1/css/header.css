@@ -2,7 +2,7 @@
 	padding: 30px 0 0;
 }
 
-.top__inner {
+.header__inner {
 	padding: 0 0 30px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -12,30 +12,17 @@
 	margin-bottom: 80px;
 }
 
-.fit {
-	display: block;
-}
-
-.fit::after {
-	content: url('../images/svg/logo.svg');
-}
-
-.logo {
-	text-transform: uppercase;
-	font-size: 21.68px;
-}
-
-.logo_studio {
+.header__logo-link--accent {
 	display: block;
 	font-size: 22.04px;
 }
 
-.free_visit {
+.header__free_visit {
 	text-transform: uppercase;
 	margin-left: auto;
 }
 
-.free_visit > a {
+.header__free_visit > a {
 	display: block;
 	font-weight: 500;
 	font-size: 18px;
@@ -47,19 +34,19 @@
 	transition: all 0.3s;
 }
 
-.free_visit > a:hover {
+.header__free_visit > a:hover {
 	text-decoration: underline;
 	color: #3596ed;
 }
 
 @media (width <=768px) {
-	.top__inner {
+	.header__inner {
 		margin-bottom: 80px;
 	}
 }
 
 @media (width <= 576px) {
-	.top__inner {
+	.header__inner {
 		margin-bottom: 60px;
 	}
 }
