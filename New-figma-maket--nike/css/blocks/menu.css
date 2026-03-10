@@ -1,0 +1,19 @@
+.menu-list {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.menu-link {
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 130%;
+	color: var(--main-color);
+	transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.menu-link:hover {
+		color: var(--accent-color);
+	}
+}
