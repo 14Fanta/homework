@@ -6,9 +6,9 @@
 		<title>Nike Air Mag</title>
 		<link rel="stylesheet" href="./css/index.css" />
 		<link
-    rel="shortcut icon"
-    href="./icons/nike-favicon-48x48.ico"
-    type="image/x-icon"
+			rel="shortcut icon"
+			href="./src/icons/nike-favicon-48x48.ico"
+			type="image/x-icon"
 		/>
 	</head>
 	<body class="page__body">
@@ -19,11 +19,15 @@
 						><img
 							width="50"
 							height="20"
-							src="./icons/nike-logo.svg"
+							src="./src/icons/nike-logo.svg"
 							alt="Логотип сайта Nike Air Mag"
 							class="header__logo-img logo-img"
 					/></a>
-					<nav class="menu header__menu" id="header__menu" aria-label="Главное меню" > 
+					<nav
+						class="menu header__menu"
+						id="header__menu"
+						aria-label="Главное меню"
+					>
 						<ul class="menu-list">
 							<li class="menu-item">
 								<a class="menu-link" href="#air-mag" lang="en">Air Mag</a>
@@ -51,7 +55,7 @@
 								<svg width="24" height="24">
 									<use
 										class="header__actions-icon"
-										href="./icons/sprite.svg#search"
+										href="./src/icons/sprite.svg#search"
 									></use>
 								</svg>
 							</button>
@@ -64,7 +68,7 @@
 								<svg width="24" height="24">
 									<use
 										class="header__actions-icon"
-										href="./icons/sprite.svg#cart"
+										href="./src/icons/sprite.svg#cart"
 									></use>
 								</svg>
 							</button>
@@ -73,17 +77,17 @@
 								title="Меню"
 								class="header__burger burger"
 								aria-label="Открыть меню"
-                aria-expanded="false"
-                aria-controls="header__menu"
+								aria-expanded="false"
+								aria-controls="header__menu"
 							>
 								<svg width="24" height="24">
 									<use
 										class="burger__icon-menu"
-										href="./icons/sprite.svg#menu-burger-icon"
+										href="./src/icons/sprite.svg#menu-burger-icon"
 									></use>
 									<use
 										class="burger__icon-cross"
-										href="./icons/sprite.svg#cross"
+										href="./src/icons/sprite.svg#cross"
 									></use>
 								</svg>
 							</button>
@@ -92,6 +96,39 @@
 				</div>
 			</div>
 		</header>
+		<main class="main">
+			<section class="hero">
+				<div class="container hero__container">
+					<article class="hero__header">
+						<ul class="hero__benefits-list text-button">
+							<li class="hero__benefits-item">стиль</li>
+							<li class="hero__benefits-item">cкорость</li>
+						</ul>
+						<h1 class="hero__title title-large" lang="en">
+							Nike <span class="hero__title--accent">air</span> mag
+						</h1>
+						<img
+							src="./src/images/Nike_Air_Mag-1.png"
+							alt="Кроссовок Nike Air Mag с жёлтым кольцом под подошвой"
+							width="846"
+							height="742"
+							class="hero__img"
+						/>
+					</article>
+					<article class="hero__footer">
+						<a href="#" class="hero__details text-button"
+							>Подробнее
+							<svg width="24" height="24">
+								<use
+									class="hero__details-icon"
+									href="./src/icons/sprite.svg#arrows-right-ico"
+								></use>
+							</svg>
+						</a>
+					</article>
+				</div>
+			</section>
+		</main>
 	</body>
-  <script type="module" src="./js/index.js"></script>
+	<script type="module" src="./js/index.js"></script>
 </html>
