@@ -3,7 +3,6 @@
 	align-items: center;
 	gap: 30px;
 }
-
 .menu-link {
 	font-weight: 300;
 	font-size: 13px;
@@ -11,7 +10,6 @@
 	color: var(--main-color);
 	transition: color var(--transition-time);
 }
-
 @media (any-hover: hover) {
 	.menu-link:hover {
 		color: var(--accent-color);
