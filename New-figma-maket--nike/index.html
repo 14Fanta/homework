@@ -4,11 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Nike Air Mag</title>
-    <meta name="description" content="Купить кроссовки Nike Air Mag с инновационной технологией амортизации. Высококачественные материалы, уникальный дизайн, вдохновлённый киноделией. Доставка, гарантия.">
+		<meta
+			name="description"
+			content="Купить кроссовки Nike Air Mag с инновационной технологией амортизации. Высококачественные материалы, уникальный дизайн, вдохновлённый киноделией. Доставка, гарантия."
+		/>
 		<link rel="stylesheet" href="./css/index.css" />
 		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+		/>
+		<link
 			rel="shortcut icon"
-			href="./src/icons/nike-favicon-48x48.ico"
+			href="./icons/nike-favicon-48x48.ico"
 			type="image/x-icon"
 		/>
 	</head>
@@ -109,20 +116,14 @@
 							Nike <span class="hero__title--accent" lang="en">air</span> mag
 						</h1>
 						<picture>
-							<source
-								srcset="./images/Nike_Air_Mag-1.avif"
-								type="image/avif"
-							/>
-							<source
-								srcset="./images/Nike_Air_Mag-1.webp"
-								type="image/webp"
-							/>
+							<source srcset="./images/Nike_Air_Mag-1.avif" type="image/avif" />
+							<source srcset="./images/Nike_Air_Mag-1.webp" type="image/webp" />
 							<img
 								src="./images/Nike_Air_Mag-1.png"
 								alt="Кроссовок Nike Air Mag с жёлтым кольцом под подошвой"
 								width="846"
 								height="742"
-                loading="lazy"
+								loading="lazy"
 								class="hero__img"
 							/>
 						</picture>
@@ -143,7 +144,7 @@
 			<section id="air-mag" class="air-mag">
 				<div class="container air-mag__container">
 					<h2 class="air-mag__title title-md">Air Mag</h2>
-					<p class="air-mag__text text-lg">
+					<p class="air-mag__text text-lg text-light">
 						Это не просто кроссовки — это шаг в будущее. С уникальным дизайном и
 						передовыми технологиями, эти кроссовки вдохновлены легендарной
 						киноделией и готовы сопровождать вас в любых приключениях.
@@ -162,13 +163,13 @@
 								class="air-mag__content-img"
 								width="911"
 								height="635"
-                loading="lazy"
+								loading="lazy"
 								src="./images/air-mag-crosses-2.png"
 								alt="Кроссовки Nike Air Mag с жёлтым кольцом под подошвой, которое находится под наклоном"
 							/>
 						</picture>
 
-						<ul class="air-mag__content-list text-lg">
+						<ul class="air-mag__content-list text-lg text-light">
 							<li class="air-mag__content-item">
 								инновационная технология амортизации, которая обеспечивает
 								непревзойденную поддержу суставов
@@ -181,7 +182,227 @@
 					</article>
 				</div>
 			</section>
+			<section id="sizes" class="sizes section">
+				<div class="container">
+					<h2 class="sizes__title title-md section-title">Размеры</h2>
+					<section class="product">
+						<div class="product__slider-wrapper">
+							<button
+								class="product__slider-btn product__slider-btn--prev"
+								aria-label="Предыдущее изображение"
+							>
+								<svg width="40" height="40">
+									<use
+										class="product__slider-button-icon product__slider-button-icon--left"
+										href="./icons/sprite.svg#slider__arrow-right"
+									></use>
+								</svg>
+							</button>
+							<div class="swiper product__slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product__slide">
+										<div class="product__slide-inner">
+											<picture>
+												<source
+													srcset="./images/product-slides/slide-3.png"
+													type="image/avif"
+												/>
+												<img
+													src="./images/product-slides/slide-3.png"
+													alt="Кроссовки Nike Air Mag, вид спереди"
+													width="357"
+													height="375"
+													class="product__slide-img"
+												/>
+											</picture>
+										</div>
+									</div>
+									<div class="swiper-slide product__slide">
+										<div class="product__slide-inner">
+											<picture>
+												<source
+													srcset="./images/product-slides/slide-1.png"
+													type="image/avif"
+												/>
+												<img
+													src="./images/product-slides/slide-1.png"
+													alt="Кроссовки Nike Air, вид сбоку"
+													width="442"
+													height="375"
+													class="product__slide-img"
+												/>
+											</picture>
+										</div>
+									</div>
+									<div class="swiper-slide product__slide">
+										<div class="product__slide-inner">
+											<picture>
+												<source
+													srcset="./images/product-slides/slide-2.png"
+													type="image/avif"
+												/>
+												<img
+													src="./images/product-slides/slide-2.png"
+													alt="Кроссовки Nike Air, вид сзади"
+													width="408"
+													height="375"
+													class="product__slide-img"
+												/>
+											</picture>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button
+								class="product__slider-btn product__slider-btn--next"
+								aria-label="Следующее изображение"
+							>
+								<svg width="40" height="40">
+									<use
+										class="product__slider-button-icon product__slider-button-icon--right"
+										href="./icons/sprite.svg#slider__arrow-right"
+									></use>
+								</svg>
+							</button>
+						</div>
+						<h3 class="product__title title-sm">
+							Кроссовки
+							<strong class="product__title--accent">Nike Air Mag</strong>
+							Back To Future
+						</h3>
+						<p class="product__text text-lg text-light">
+							Nike Air Mag — это кусочек киноистории и технологического
+							прогресса. Если вы ищете уникальную пару кроссовок, которая станет
+							не только стильным аксессуаром, но и ценным дополнением вашей
+							коллекции, Nike Air Mag — идеальный выбор.
+						</p>
+						<p class="product__price title-sm">36 490 ₽</p>
+						<article class="product__sizes-wrapper">
+							<section class="product__sizes product__stock">
+								<h4 class="product__sizes-title product__sizes-title--white">
+									Размеры в наличии
+								</h4>
+								<div
+									class="product__sizes-wrapper product__stock-wrapper"
+									data-sizes="list"
+								>
+									<button
+										class="product__stock-btn product__sizes-btn"
+										aria-label="Выбрать размер"
+										title="Выбрать размер"
+										data-sizes="button"
+									>
+										38
+									</button>
+									<button
+										class="product__sizes-btn product__stock-btn"
+										aria-label="Выбрать размер"
+										title="Выбрать размер"
+										data-sizes="button"
+									>
+										40
+									</button>
+									<button
+										class="product__sizes-btn product__stock-btn product__sizes-btn--active"
+										aria-label="Выбрать размер"
+										title="Выбрать размер"
+										data-sizes="button"
+									>
+										41
+									</button>
+									<button
+										class="product__sizes-btn product__stock-btn"
+										aria-label="Выбрать размер"
+										title="Выбрать размер"
+										data-sizes="button"
+									>
+										42
+									</button>
+									<button
+										class="product__sizes-btn product__stock-btn"
+										aria-label="Выбрать размер"
+										title="Выбрать размер"
+										data-sizes="button"
+									>
+										44
+									</button>
+									<button
+										class="product__sizes-btn product__stock-btn"
+										aria-label="Выбрать размер"
+										title="Выбрать размер"
+										data-sizes="button"
+									>
+										45
+									</button>
+								</div>
+								<div class="product__buy-wrapper">
+									<button
+										class="product__buy-btn--yellow text-btn"
+										aria-label="Купить в 1 клик"
+									>
+										Купить в 1 клик
+									</button>
+									<button
+										class="product__cart-btn"
+										aria-label="Добавить в корзину"
+										title="Добавить в корзину"
+									>
+										<svg
+											class="product__cart-icon"
+											viewBox="0 0 24 24"
+											width="24"
+											height="24"
+										>
+											<use href="./icons/sprite.svg#cart"></use>
+										</svg>
+									</button>
+								</div>
+							</section>
+							<div class="product__sizes product__order">
+								<h4 class="product__sizes-title product__sizes-title--yellow">
+									Размеры под заказ
+								</h4>
+								<div class="product__sizes-wrapper product__stock-wrapper">
+									<button class="product__sizes-btn" disabled>38</button>
+									<button
+										class="product__sizes-btn"
+										disabled
+										aria-label="размеры под заказ"
+									>
+										40
+									</button>
+									<button
+										class="product__sizes-btn"
+										aria-label="размеры под заказ"
+										disabled
+									>
+										41
+									</button>
+									<button
+										class="product__sizes-btn"
+										aria-label="размеры под заказ"
+										disabled
+									>
+										42
+									</button>
+									<button
+										class="product__sizes-btn"
+										aria-label="размеры под заказ"
+										disabled
+									>
+										44
+									</button>
+								</div>
+								<a href="#" class="product__order-link text-little"
+									>Заказать размер</a
+								>
+							</div>
+						</article>
+					</section>
+				</div>
+			</section>
 		</main>
 	</body>
 	<script type="module" src="./js/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </html>

@@ -4,24 +4,35 @@
 
 	/* colors */
 	--main-color: #fff;
+	--main-glow-color: #ffffffc1;
 	--accent-color: #ffea00;
+	--accent-glow-color: #ffea004d;
 	--bg-color: #2a2a29;
 	--secondary-color: #c9c69b;
 	--disable-color: #5d5d56;
-  --shadow-color: #181817;
+	--disable-glow-color: #5d5d564d;
+	--shadow-color: #181817;
+
+	/* shadow-color */
+
+	--shadow-glow: 0 0 6px 2px var(--main-glow-color);
+	--shadow-accent-glow: 0 0 6px 2px var(--accent-glow-color);
+	--shadow-disaled-glow: 0 0 6px 2px var(--disabled-glow-color);
 
 	/* container */
 	--container-width: 1240px;
 	--container-padding: 15px;
 	--second-container-width: 768px;
 
-  /* Transitions */
-  --transition-time:.3s;
+	/* Transitions */
+	--transition-time: 0.3s;
 
-  /* layers */
-  --layer-negative:-1;
-  --layer-1:1;
-  --layer-2:2;
-  --layer-3:3;
+	/* layers */
+	--layer-negative: -1;
+	--layer-1: 1;
+	--layer-2: 2;
+	--layer-3: 3;
 
+  /* border--radius */
+  --border-radius-1:4px;
 }

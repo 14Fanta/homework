@@ -8,11 +8,14 @@
 	text-transform: uppercase;
 	margin-bottom: 13px;
 }
+
 .air-mag__text {
 	display: flex;
 	gap: 10px;
 	align-items: center;
+  font-weight: normal;
 }
+
 .air-mag__text::before {
 	content: '';
 	display: block;
@@ -82,6 +85,7 @@
 	width: 32px;
 	height: 32px;
 }
-.air-mag__contentiner {
-	padding-bottom: 93px;
+
+.air-mag__container {
+	padding-bottom: clamp(80px, 72.0989px + 2.107vw, 93px);
 }

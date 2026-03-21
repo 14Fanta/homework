@@ -2,48 +2,79 @@
 * {
 	box-sizing: border-box;
 }
+
 .page {
-  scroll-padding-top:100px;
+	scroll-padding-top: 100px;
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
 	font-family: var(--font-family);
 	font-weight: normal;
 	color: var(--main-color);
 }
+
 .page__body {
 	min-width: 375px;
 	background-color: var(--bg-color);
 }
+
 .page__body--no-scroll {
 	overflow-y: hidden;
 }
+
 .container {
 	width: min(var(--container-width), 100% - var(--container-padding) * 2);
 	margin-inline: auto;
 }
+
 img {
 	object-fit: cover;
 }
+
 .text-little {
 	font-size: 13px;
 	line-height: 130%;
 }
+
 .text-btn {
 	font-size: 16px;
 	line-height: 130%;
 }
+
 .text-lg {
 	font-size: 16px;
 	line-height: 140%;
 }
+
+.text-md {
+	font-size: 32px;
+}
+
+.text-md,
+.title-md,
+.title-sm,
 .title-lg {
-	font-size: clamp(48px, 1.786rem + 5.18vw, 128px);
 	font-weight: 600;
+}
+
+.title-light,
+.text-light {
+	font-weight: 300;
+}
+
+.title-sm {
+	/* 32px */
+	font-size: clamp(24px, 16.3858px + 2.0305vw, 32px);
+}
+
+.title-lg {
+	/* 128px */
+	font-size: clamp(48px, 1.786rem + 5.18vw, 128px);
 }
 .title-md {
-	font-size: clamp(32px, 1.575rem + 1.81vw, 60px);
-	font-weight: 600;
+	/* 60px */
+	font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
 }
+
 @media (width > 768px) {
 	.text-button {
 		font-size: 16px;
@@ -61,4 +92,24 @@ button:focus-visible {
 }
 a {
 	color: var(--main-color);
+}
+
+@media (width > 576px) {
+	.section {
+		padding-bottom: 140px;
+	}
+
+	.section-title {
+		margin-bottom: 40px;
+	}
+}
+
+@media (width <= 576px) {
+	.section {
+		padding-bottom: 80px;
+	}
+
+	.section-title {
+		margin-bottom: 30px;
+	}
 }
