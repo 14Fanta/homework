@@ -24,5 +24,20 @@
     <path d="M10 28.3333L18.3333 20L10 11.6666M21.6667 28.3333L30 20L21.6667 11.6666" stroke-width="2"
       stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
+  
+  <symbol id="play" viewBox="0 0 96 96" fill="none">
+  <g filter="url(#filter0_f_24_146)">
+    <circle cx="48" cy="48" r="39" stroke-width="2" />
+  </g>
+  <path d="M48 8.5C69.8153 8.5 87.5 26.1848 87.5 48C87.5 69.8153 69.8153 87.5 48 87.5C26.1848 87.5 8.5 69.8153 8.5 48C8.5 26.1848 26.1848 8.5 48 8.5Z" fill="#2A2A29" fill-opacity="0.5"  />
+  <path d="M57.7528 46.3782C58.8589 47.1765 58.8589 48.8235 57.7528 49.6218L45.1704 58.7023C43.8477 59.6569 42 58.7118 42 57.0806L42 38.9194C42 37.2882 43.8477 36.3431 45.1704 37.2977L57.7528 46.3782Z" fill="#FFEA00" />
+  <defs>
+    <filter id="filter0_f_24_146" x="0" y="0" width="96" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_24_146" />
+    </filter>
+  </defs>
+</symbol>
 
 </svg>

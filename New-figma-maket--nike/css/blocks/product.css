@@ -1,5 +1,9 @@
 @import '../base/vars.css';
 
+.sizes__title{
+  text-transform: uppercase;
+}
+
 button {
 	color: var(--main-color);
 }
@@ -101,10 +105,6 @@ button {
 	margin-bottom: 20px;
 }
 
-.product__title--accent {
-	color: var(--accent-color);
-}
-
 .product__price {
 	margin-block: 40px;
 	color: var(--main-color);
@@ -192,10 +192,11 @@ button.product__sizes-btn--active {
 	border-radius: 12px;
 	border: 1px solid var(--main-glow-color);
 	box-shadow:
-		0 0 6px 2px var(--main-glow-color),
-		inset 0 0 6px 2px var(--main-glow-color);
+		0 0 6px 1px var(--main-glow-color),
+		inset 0 0 6px 1px var(--main-glow-color);
 	height: 60px;
-	transition: all var(--transition-time);
+	transition: border-color var(--transition-time),box-shadow var(--transition-time),color var(--transition-time);
+  
 }
 
 @media (any-hover: hover) {

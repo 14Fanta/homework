@@ -1,0 +1,136 @@
+@import url(../base/vars.css);
+
+.specifications__title {
+	text-transform: uppercase;
+}
+
+.specifications__video {
+	position: relative;
+}
+
+@media (width > 576px) {
+	.specifications__video {
+		margin-bottom: 60px;
+	}
+}
+
+@media (width <= 576px) {
+	.specifications__video {
+		margin-bottom: 40px;
+	}
+}
+
+.specifications__video-img {
+	overflow: hidden;
+	border: 1px solid var(--main-color);
+	border-radius: 12px;
+	user-select: none;
+}
+
+.specifications__button-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	border: 1px solid var(--main-color);
+	border-radius: 50%;
+	background-color: var(--overlay-color);
+	transform: translate(50%, -50%);
+	box-shadow:
+		var(--shadow-glow),
+		inset var(--shadow-glow);
+	color: 1px solid var(--main-color);
+	transform: translate(50%, -50%);
+	transition-property: box-shadow, border-color, opacity;
+	transition-duration: var(--transition-time);
+	cursor: pointer;
+	user-select: none;
+}
+
+@media (any-hover: hover) {
+	.specifications__button-link:hover {
+		border-color: var(--accent-color);
+		box-shadow:
+			var(--shadow-accent-glow),
+			inset var(--shadow-accent-glow);
+	}
+}
+
+.specifications__button-link:active {
+	opacity: 0.75;
+}
+
+@media (width > 576px) {
+	.specifications__button-link {
+		width: 80px;
+		height: 80px;
+	}
+
+	.specifications__button-ico {
+		width: 17px;
+		height: 23px;
+		transform: translateX(2px);
+	}
+}
+
+@media (width <=576px) {
+	.specifications__button-link {
+		width: 48px;
+		height: 48px;
+	}
+
+	.specifications__button-ico {
+		overflow: visible;
+		width: 10px;
+		height: 12px;
+		transform: translateX(1px);
+	}
+}
+
+.specifications__benefits-list {
+	display: grid;
+	justify-content: space-around;
+	align-items: baseline;
+	grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+	gap: 40px 20px;
+}
+
+.specifications__benefits-element svg {
+	margin-bottom: 4px;
+	transform: translateX(-7px);
+}
+
+@media (width <= 576px) {
+	.specifications__benefits-ico {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+.specifications__benefits-element h3 {
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.specifications__benefits-description {
+	font-weight: 300;
+	line-height: 140%;
+}
+
+@media (width > 576px) {
+	.specifications__benefits-element:first-child p {
+		font-size: 14px;
+	}
+
+	.specifications__benefits-description {
+		font-size: 13px;
+	}
+}
+
+@media (width <= 576px) {
+	.specifications__benefits-description {
+		font-size: 13px;
+	}
+}

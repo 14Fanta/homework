@@ -1,4 +1,5 @@
 @import './vars.css';
+
 * {
 	box-sizing: border-box;
 }
@@ -14,6 +15,7 @@
 
 .page__body {
 	min-width: 375px;
+	/* min-height: 520vh; */
 	background-color: var(--bg-color);
 }
 
@@ -28,6 +30,10 @@
 
 img {
 	object-fit: cover;
+}
+
+.accent {
+	color:var(--accent-color);
 }
 
 .text-little {
@@ -49,6 +55,7 @@ img {
 	font-size: 32px;
 }
 
+.title-xs,
 .text-md,
 .title-md,
 .title-sm,
@@ -59,6 +66,10 @@ img {
 .title-light,
 .text-light {
 	font-weight: 300;
+}
+
+.title-xs {
+	font-size: 18px;
 }
 
 .title-sm {

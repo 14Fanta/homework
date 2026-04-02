@@ -18,6 +18,7 @@
 			href="./icons/nike-favicon-48x48.ico"
 			type="image/x-icon"
 		/>
+		<script src="./js/fslightbox.js" type="module"></script>
 	</head>
 	<body class="page__body">
 		<header class="header">
@@ -44,7 +45,7 @@
 								<a class="menu-link" href="#sizes">Размеры</a>
 							</li>
 							<li class="menu-item">
-								<a class="menu-link" href="#characterisrics">Характеристики</a>
+								<a class="menu-link" href="#specifications">Характеристики</a>
 							</li>
 							<li class="menu-item">
 								<a class="menu-link" href="#top-models">Другие ТОП модели</a>
@@ -267,7 +268,7 @@
 						</div>
 						<h3 class="product__title title-sm">
 							Кроссовки
-							<strong class="product__title--accent">Nike Air Mag</strong>
+							<strong class="accent">Nike Air Mag</strong>
 							Back To Future
 						</h3>
 						<p class="product__text text-lg text-light">
@@ -277,7 +278,7 @@
 							коллекции, Nike Air Mag — идеальный выбор.
 						</p>
 						<p class="product__price title-sm">36 490 ₽</p>
-						<article class="product__sizes-wrapper">
+						<div class="product__sizes-wrapper">
 							<section class="product__sizes product__stock">
 								<h4 class="product__sizes-title product__sizes-title--white">
 									Размеры в наличии
@@ -358,7 +359,7 @@
 									</button>
 								</div>
 							</section>
-							<div class="product__sizes product__order">
+							<section class="product__sizes product__order">
 								<h4 class="product__sizes-title product__sizes-title--yellow">
 									Размеры под заказ
 								</h4>
@@ -396,7 +397,447 @@
 								<a href="#" class="product__order-link text-little"
 									>Заказать размер</a
 								>
-							</div>
+							</section>
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="specifications" class="specifications section">
+				<div class="container specifications__container">
+					<h2 class="specifications__title title-md section-title">
+						Характеристики
+					</h2>
+					<article class="specifications__video">
+						<picture class="specifications__video-picture">
+							<source srcset="./images/crocss_img-video.webp" type="img/webp" />
+							<source
+								srcset="./images/crocss_img-video345x167.webp"
+								type="img/webp"
+							/>
+							<source
+								srcset="./images/crocss_img-video-345x167.jpg"
+								media="(max-width: 576px)"
+								type="img/jpeg"
+							/>
+							<img
+								width="1240"
+								height="600"
+								class="specifications__video-img"
+								src="./images/crocss_img-video.jpg"
+								alt="Видео заставка с кроссовками Nike Air Mag, которые лежат, кроссовки новой версии на жёлтом фоне, с множеством разных наклеек на фоне"
+								loading="lazy"
+							/>
+						</picture>
+						<a
+							data-fslightbox
+							href="https://www.youtube.com/watch?v=NimGxU4Qnhk"
+							class="specifications__button-link"
+							title="Запустить видео"
+						>
+							<img
+								width="17"
+								height="23"
+								class="specifications__button-ico"
+								src="./icons/play-icon.svg"
+								alt="Запустить видео"
+								loading="lazy"
+							/>
+						</a>
+					</article>
+					<section class="specifications__benefits-list">
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#planet-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Футуристический дизайн
+							</h3>
+							<p class="specifications__benefits-description text-light">
+								Nike Air Mag выделяются своим уникальным и оригинальным
+								дизайном, который сразу же привлекает внимание. Эта модель
+								создана для тех, кто ценит стиль, вдохновленный наукой и
+								фантастикой
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#arch-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Автоматическая шнуровка
+							</h3>
+							<p class="specifications__benefits-description">
+								Инновационная система автоматической шнуровки обеспечивает
+								идеальную фиксацию обуви на ноге без необходимости вручную
+								завязывать шнурки, что значительно повышает комфорт
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#stop-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Ограниченный выпуск
+							</h3>
+							<p class="specifications__benefits-description">
+								Nike Air Mag были выпущены в ограниченном количестве, что делает
+								каждую пару желанным объектом для коллекционеров и любителей
+								уникальных кроссовок
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#light-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Встроенная подсветка
+							</h3>
+							<p class="specifications__benefits-description">
+								Благодаря светодиодной подсветке, кроссовки выглядят эффектно в
+								темное время суток. Это придает им еще больше оригинальности и
+								уникальности
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#sneaker-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Комфорт и поддержка
+							</h3>
+							<p class="specifications__benefits-description">
+								Модель предлагает высокий уровень комфорта благодаря
+								качественной амортизации и поддержке стопы, что делает их
+								идеальными для длительного ношения
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#squares-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Современные материалы
+							</h3>
+							<p class="specifications__benefits-description">
+								Nike Air Mag изготовлены из высококачественных синтетических
+								материалов, которые обеспечивают долговечность, устойчивость к
+								износу и легкость в уходе
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#runner-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Хорошая сцепляемость
+							</h3>
+							<p class="specifications__benefits-description">
+								Подошва кроссовок обладает отличным сцеплением с различными
+								поверхностями, что обеспечивает надежность при ходьбе и беге
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#diamond-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Культовый статус
+							</h3>
+							<p class="specifications__benefits-description">
+								Nike Air Mag стали культовыми благодаря своему появлению в кино
+								"Назад в будущее 2", что подчеркивает их историческую и
+								культурную значимость
+							</p>
+						</article>
+						<article class="specifications__benefits-element">
+							<svg class="specifications__benefits-ico" width="56" height="56">
+								<use href="./icons/specifications-icons.svg#sun-ico"></use>
+							</svg>
+							<h3 class="specifications__benefits-title title-xs">
+								Яркое дополнение к любому образу
+							</h3>
+							<p class="specifications__benefits-description">
+								Кроссовки легко вписываются в различные стили одежды, позволяя
+								создавать уникальные образы. Они могут дополнить как спортивный,
+								так и повседневный стиль
+							</p>
+						</article>
+					</section>
+				</div>
+			</section>
+			<section id="top-models" class="top-models section">
+				<div class="container">
+					<h2 class="top-models__title title-md section-title">
+						Другие <span class="accent">Топ</span> модели от Nike
+					</h2>
+					<section class="top-models__sneakers-list">
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Nike Air Yeezy 2 "Red October"
+									</h3>
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-1.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-1.png"
+										alt="Высокие красные кроссовки Nike с лаконичным дизайном и фирменным логотипом"
+										width="190"
+										height="143"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Wings x Air Jordan 1
+									</h3>
+
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-2.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-2.png"
+										alt="Пара чёрно-белых баскетбольных кроссовок Jordan с выразительным графическим узором на боковой части"
+										width="190"
+										height="120"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Nike Dunk SB Low Yellow Lobster
+									</h3>
+
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-3.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-3.png"
+										alt="Низкие жёлтые кроссовки Nike Dunk SB Low в расцветке 'Lobster' с коричневой подошвой"
+										width="190"
+										height="88"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										DJ Khaled x Air Jordan 3 “Grateful”
+									</h3>
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-4.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-4.png"
+										alt="Красные баскетбольные кроссовки Air Jordan 3 с характерным 'цементным' принтом на носке и пятке, белой подошвой"
+										width="190"
+										height="136"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Nike SB Dunk Low Freddy Krueger
+									</h3>
+
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-5.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-5.png"
+										alt="Низкие кроссовки Nike с камуфляжным принтом в красно-бежево-зелёных тонах, с крупным белым логотипом Nike"
+										width="190"
+										height="94"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Air Jordan 10 x OVO
+									</h3>
+
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-6.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-6.png"
+										alt="Белые высокие баскетбольные кроссовки Jordan с золотыми декоративными элементами и минималистичным дизайном"
+										width="190"
+										height="97"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Air Jordan 12 Flu-Game
+									</h3>
+
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-7.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-7.png"
+										alt="Высокие баскетбольные кроссовки с чёрной верхней частью и ярко-красной подошвой, лаконичный дизайн"
+										width="190"
+										height="111"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Air Jordan 1 “Shattered Backboard” 1985
+									</h3>
+
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-8.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-8.png"
+										alt="Баскетбольные кроссовки Jordan в красно-белой расцветке, с крупным чёрным логотипом Nike на боковой стороне"
+										width="190"
+										height="101"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
+						</article>
+						<article class="top-models__sneakers">
+							<a href="#" class="top-models__sneakers-element">
+								<div class="top-models__sneakers-wrapper">
+									<h3 class="top-models__sneakers-title title-xs">
+										Kanye West Nike Air Yeezy 1 “Prototype”
+									</h3>
+
+									<svg width="24" height="24">
+										<use
+											class="top-models__sneakers-link__ico"
+											href="./icons/arrows-right-ico.svg"
+										></use>
+									</svg>
+								</div>
+								<picture class="top-models__sneakers-picture">
+									<source
+										srcset="./images/top-models/image-9.png"
+										type="img/webp"
+									/>
+									<img
+										class="top-models__sneakers-img"
+										src="./images/top-models/image-9.png"
+										alt="Высокие тёмные кроссовки с широким ремешком вместо шнурков, с оранжевым круглым элементом на боковой части"
+										width="190"
+										height="147"
+										loading="lazy"
+									/>
+								</picture>
+							</a>
 						</article>
 					</section>
 				</div>
