@@ -3,6 +3,7 @@
 }
 
 .top-models__sneakers-list {
+	display: -ms-grid;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 	gap: 20px;
@@ -10,6 +11,9 @@
 
 .top-models__sneakers {
 	border: 2px solid var(--accent-color);
+	-webkit-box-shadow:
+		0 0 32px 3px var(--accent-glow-color),
+		inset 0 0 32px 3px var(--accent-glow-color);
 	box-shadow:
 		0 0 32px 3px var(--accent-glow-color),
 		inset 0 0 32px 3px var(--accent-glow-color);
@@ -18,11 +22,19 @@
 }
 
 .top-models__sneakers-element {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
 	min-height: 204px;
 	height: 100%;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
 	transition-property: color;
+	-webkit-transition-duration: var(--transition-time);
+	-o-transition-duration: var(--transition-time);
 	transition-duration: var(--transition-time);
 }
 
@@ -45,20 +57,28 @@
 }
 
 .top-models__sneakers-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	height: 100%;
 }
 
 @media (width <= 768px) {
 	.top-models__sneakers-wrapper {
+		-ms-flex-negative: 0;
 		flex-shrink: 0;
 	}
 }
 
 .top-models__sneakers-title {
-  max-width: 139px;
+	max-width: 139px;
 	color: currentColor;
 }
 
@@ -67,6 +87,7 @@
 }
 
 .top-models__sneakers-picture {
+	-ms-flex-item-align: end;
 	align-self: flex-end;
 }
 

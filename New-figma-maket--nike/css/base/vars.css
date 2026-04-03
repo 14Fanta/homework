@@ -12,7 +12,7 @@
 	--disable-color: #5d5d56;
 	--disable-glow-color: #5d5d564d;
 	--shadow-color: #181817;
-  --overlay-color:#2a2a2980;
+	--overlay: linear-gradient(rgba(30, 30, 30, 0.9), #000 1810%);
 
 	/* shadow-color */
 
@@ -34,6 +34,6 @@
 	--layer-2: 2;
 	--layer-3: 3;
 
-  /* border--radius */
-  --border-radius-1:4px;
+	/* border--radius */
+	--border-radius-1: 4px;
 }

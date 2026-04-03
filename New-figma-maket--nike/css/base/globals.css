@@ -1,6 +1,7 @@
 @import './vars.css';
 
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -8,6 +9,7 @@
 	scroll-padding-top: 100px;
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
+  scrollbar-gutter: stable;
 	font-family: var(--font-family);
 	font-weight: normal;
 	color: var(--main-color);
@@ -15,7 +17,6 @@
 
 .page__body {
 	min-width: 375px;
-	/* min-height: 520vh; */
 	background-color: var(--bg-color);
 }
 
@@ -29,11 +30,12 @@
 }
 
 img {
+	-o-object-fit: cover;
 	object-fit: cover;
 }
 
 .accent {
-	color:var(--accent-color);
+	color: var(--accent-color);
 }
 
 .text-little {
@@ -97,7 +99,8 @@ img {
 	}
 }
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible {
 	outline: 1px solid var(--accent-color);
 	outline-offset: 3px;
 }

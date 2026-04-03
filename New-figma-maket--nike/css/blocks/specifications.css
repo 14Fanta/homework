@@ -24,34 +24,70 @@
 	overflow: hidden;
 	border: 1px solid var(--main-color);
 	border-radius: 12px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 }
 
 .specifications__button-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	position: absolute;
 	top: 50%;
 	right: 50%;
 	border: 1px solid var(--main-color);
 	border-radius: 50%;
-	background-color: var(--overlay-color);
+	background-color: var(#2a2a2980);
+	-webkit-transform: translate(50%, -50%);
+	-ms-transform: translate(50%, -50%);
 	transform: translate(50%, -50%);
+	-webkit-box-shadow:
+		var(--shadow-glow),
+		inset var(--shadow-glow);
 	box-shadow:
 		var(--shadow-glow),
 		inset var(--shadow-glow);
 	color: 1px solid var(--main-color);
 	transform: translate(50%, -50%);
+	-webkit-transition-property:
+		border-color,
+		opacity,
+		-webkit-box-shadow;
+	transition-property:
+		border-color,
+		opacity,
+		-webkit-box-shadow;
+	-o-transition-property: box-shadow, border-color, opacity;
 	transition-property: box-shadow, border-color, opacity;
+	transition-property:
+		box-shadow,
+		border-color,
+		opacity,
+		-webkit-box-shadow;
+	-webkit-transition-duration: var(--transition-time);
+	-o-transition-duration: var(--transition-time);
 	transition-duration: var(--transition-time);
 	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 }
 
 @media (any-hover: hover) {
 	.specifications__button-link:hover {
 		border-color: var(--accent-color);
+		-webkit-box-shadow:
+			var(--shadow-accent-glow),
+			inset var(--shadow-accent-glow);
 		box-shadow:
 			var(--shadow-accent-glow),
 			inset var(--shadow-accent-glow);
@@ -71,6 +107,8 @@
 	.specifications__button-ico {
 		width: 17px;
 		height: 23px;
+		-webkit-transform: translateX(2px);
+		-ms-transform: translateX(2px);
 		transform: translateX(2px);
 	}
 }
@@ -85,13 +123,19 @@
 		overflow: visible;
 		width: 10px;
 		height: 12px;
+		-webkit-transform: translateX(1px);
+		-ms-transform: translateX(1px);
 		transform: translateX(1px);
 	}
 }
 
 .specifications__benefits-list {
+	display: -ms-grid;
 	display: grid;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
+	-webkit-box-align: baseline;
+	-ms-flex-align: baseline;
 	align-items: baseline;
 	grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
 	gap: 40px 20px;
@@ -99,6 +143,8 @@
 
 .specifications__benefits-element svg {
 	margin-bottom: 4px;
+	-webkit-transform: translateX(-7px);
+	-ms-transform: translateX(-7px);
 	transform: translateX(-7px);
 }
 
