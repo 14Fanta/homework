@@ -1,0 +1,11 @@
+:root{--main-color:#fff;--accent-color:#f69020;--second-accent-color:#ffc619;--bg-color:#191b20;--first-bg-color:#191b20;--second-bg-color:#131517;--dark-color:#000;--shadow-color:#000;--bg-icons:#ffffff12;--border-color:#393c43;--overlay:#33333371;--bg-menu:#282b32;--bg-text:#343a3e;--color-btn:#252121;--second-card-color:#202124;--first-card-color:#282b32;--bg-gradient-btn:linear-gradient(
+		141deg,
+		#ea422a 0%,
+		#f69020 47.92%,
+		#ffc619 100%
+	);--bg-gradient-btn-click:linear-gradient(
+		141deg,
+		#e71f00 0%,
+		#fa8100 47.92%,
+		#dfa700 100%
+	);--hidden-color:#606571;--gray-btn-color:#606571;--bg-gyms-cards:#ffc61966;--details-text-color:#c5c5c5;--color-arrow:#ffc619;--summary-hover:#343740;--background-arrow:#34373f;--shadow-arrow:0 9px 16px 0 rgba(0, 0, 0, 0.21);--bg-arrow:#2e3441;--font-family:'Muller',sans-serif;--layer-negative-2:-2;--layer-negative-1:-1;--layer-1:1;--layer-2:2;--layer-3:3;--transition-time:0.3s;--second-transition-time:0.2s;--container-width:1818px;--container-padding:15px}

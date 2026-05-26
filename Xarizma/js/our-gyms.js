@@ -1,0 +1,1 @@
+export const gymsSelected=()=>{let e=document.querySelector('[data-sizes="list"]'),t=document.querySelectorAll('[data-sizes="button"'),s=e=>{let s=e.target;s?.classList.contains("our__gyms-halls__text")&&(t.forEach(e=>e.classList.remove("our__gyms-halls__text-selected")),s.classList.add("our__gyms-halls__text-selected"))};e.addEventListener("click",s)};
