@@ -46,15 +46,17 @@ function getTimeOfDay(currentTime) {
 
 getTimeOfDay(11)
 
+// Задача  4.
+
 function findFirstEven(start, end) {
 	for (let i = start; i <= end; i++) {
 		if (i % 2 === 0) {
-			console.log(i)
+			console.log(`${i} - первое четное число в диапазоне от ${start} до ${end}`)
 			break
 		}
 	}
 }
 
-findFirstEven(3, 10)
+findFirstEven(8, 10)
 findFirstEven(4, 10)
 findFirstEven(5, 10) 
