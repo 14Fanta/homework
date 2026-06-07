@@ -32,11 +32,7 @@ getUserAverageAge(users)
 
 function getAllAdmins(users) {
 	let array = []
-	for (let i in users) {
-		if (users[i].isAdmin === true) {
-			array.push(users[i].name)
-		}
-	}
+	for (let i in users) if (users[i].isAdmin) array.push(users[i].name)
 	console.log(`${array} - Администраторы`)
 }
 
@@ -47,10 +43,10 @@ getAllAdmins(users)
 function first(arr, n) {
 	let arrayUsers = []
 	for (let i = 0; i <= n - 1; i++) {
-		arrayUsers.push(arr[i])
+    arrayUsers.push(arr[i])
   }
-  arrayUsers.length == 0 ? console.log([]) : console.log(arrayUsers.at(0))
+  arrayUsers.length == 0 ? console.log([]) : console.log(arrayUsers)
 }
 
-first(users, 2)
+first(users, 1)
 
