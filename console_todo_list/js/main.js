@@ -1,6 +1,11 @@
 'use strict'
 
 let todos = []
+const formElement = document.querySelector('.form')
+const input = document.querySelector('.input')
+const todosList = document.querySelector('.todos')
+const todosContainer = document.querySelector('.todo')
+const buttonEl = document.querySelector('.button')
 
 const toDoKeys = {
 	id: 'id',
@@ -8,11 +13,34 @@ const toDoKeys = {
 	isCompleted: 'isCompleted',
 }
 
+function createTodoElement(text) {
+	// if (text.length === 0) {
+	// 	return
+	// } else {
+		return todosList.insertAdjacentHTML(
+			'beforeend',
+			`          
+        <li class="todo">
+          <div class="todo-text">${text}</div>
+          <div class="todo-actions">
+            <button class="button-complete button">&#10004;</button>
+            <button class="button-delete button">&#10006;</button>
+          </div>
+        </li>
+        `,
+		)
+	// }
+}
+
 function callback_error(toDoId) {
 	console.error(`Todo with id ${toDoId} not found`)
 }
 
-const getNewToDoId = todos => {
+function callback_error_nothing() {
+	console.error(`Вы ничего не вписали в инпут`)
+}
+
+const getNewToDoId = arr => {
 	return (
 		todos.reduce((maxId, todo) => Math.max(maxId, todo[toDoKeys.id]), 0) + 1
 	)
@@ -24,47 +52,36 @@ const createTodo = (arr, todo) => {
 		[toDoKeys['text']]: todo,
 		[toDoKeys['isCompleted']]: false,
 	})
+  return arr
+}
+
+// createTodo(todos, 'Покормить кота')
+// createTodo(todos, 'Сходить в магазин')
+
+function completeToDoById(arr, toDoId) {
+	const todo = todos.find(todo => todo[toDoKeys.id] === toDoId)
+	if (!todo || todo === null) {
+		callback_error(toDoId)
+		return null
+	} else {
+		todo[toDoKeys.isCompleted] = !todo[toDoKeys.isCompleted]
+	}
+	return todo
+}
+
+const deleteTodoById = (arr, toDoId) => {
+	const todoIndex = arr.findIndex(arr => arr[todoKeys.id] === toDoId)
+	if (todoIndex === -1) {
+		return null
+	}
+	arr.splice(todoIndex, 1)
 	return arr
 }
 
-createTodo(todos, 'Покормить кота')
-createTodo(todos, 'Сходить в магазин')
-
-function completeToDoById(todos, toDoId) {
-	const todo = todos.find(todo => todo[toDoKeys.id] === toDoId)
-	if (!todo) {
-		callback_error(toDoId)
-	} else {
-		return (todo[toDoKeys.isCompleted] = !todo[toDoKeys.isCompleted])
-	}
+const handleCreateToDo = (arr, text) => {
+	return createTodoElement(createTodo(arr, text))
 }
 
-// function deleteTodoById(todos, toDoId) {
-// 	const todo_index = todos.findIndex(todo => todo[toDoKeys['id']] === toDoId)
-//   if (todo_index === -1) {
-//     console.log(callback_error(toDoId))
-//     return todos
-//   }
-//     todos.splice(todo_index,1)
-//     console.log(todos)
-// }
-
-const deleteTodoById = (todos, toDoId) => {
-  return todos.filter((todo) => todo[toDoKeys.id] !== toDoId)
-}
-
-deleteTodoById(todos, 1)
-
-// function deleteTodoById(todos, toDoId) {
-//   const newTodos = [...todos]
-//   --toDoId
-// 	let count = 0
-// 	for (let i = -1; i < toDoId; i++) {
-// 		count++
-//   }
-// 	return newTodos.splice(toDoId, 1)
-// }
-
-// console.log(deleteTodoById(todos, 0))
-
-console.log(todos)
+buttonEl.addEventListener('click', () => {
+	handleCreateToDo(todos, input.value)
+})
