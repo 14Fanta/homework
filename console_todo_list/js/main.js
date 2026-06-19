@@ -1,43 +1,50 @@
+// Подключение строгого режима
 'use strict'
 
+// Переменнные
 let todos = []
 const formElement = document.querySelector('.form')
 const input = document.querySelector('.input')
 const todosList = document.querySelector('.todos')
 const todosContainer = document.querySelector('.todo')
 const buttonEl = document.querySelector('.button')
+const toDoText = document.querySelector('.todo')
+
+// Данные
 
 const toDoKeys = {
-	id: 'id',
+  id: 'id',
 	text: 'text',
 	isCompleted: 'isCompleted',
 }
 
-function createTodoElement(text) {
-	// if (text.length === 0) {
-	// 	return
-	// } else {
-		return todosList.insertAdjacentHTML(
-			'beforeend',
-			`          
-        <li class="todo">
-          <div class="todo-text">${text}</div>
+// Функции
+
+const createTodo = (arr, todo) => {
+	const newTodo = {
+		[toDoKeys['id']]: getNewToDoId(todos),
+		[toDoKeys['text']]: todo.trim(),
+		[toDoKeys['isCompleted']]: false,
+	}
+	arr.push(newTodo)
+	return newTodo
+}
+
+function createTodoElement(todo) {
+  const todoElement = document.createElement('li')
+	todoElement.classList.add('todo')
+	todoElement.dataset.id = todo[toDoKeys.id]
+  todoElement.innerHTML = `       
+          <div class="todo-text">${todo[toDoKeys.text]}</div>
           <div class="todo-actions">
             <button class="button-complete button">&#10004;</button>
             <button class="button-delete button">&#10006;</button>
-          </div>
-        </li>
-        `,
-		)
-	// }
+          </div>`
+	return todoElement
 }
 
 function callback_error(toDoId) {
 	console.error(`Todo with id ${toDoId} not found`)
-}
-
-function callback_error_nothing() {
-	console.error(`Вы ничего не вписали в инпут`)
 }
 
 const getNewToDoId = arr => {
@@ -46,20 +53,8 @@ const getNewToDoId = arr => {
 	)
 }
 
-const createTodo = (arr, todo) => {
-	arr.push({
-		[toDoKeys['id']]: getNewToDoId(todos),
-		[toDoKeys['text']]: todo,
-		[toDoKeys['isCompleted']]: false,
-	})
-  return arr
-}
-
-// createTodo(todos, 'Покормить кота')
-// createTodo(todos, 'Сходить в магазин')
-
 function completeToDoById(arr, toDoId) {
-	const todo = todos.find(todo => todo[toDoKeys.id] === toDoId)
+	const todo = arr.find(todo => todo[toDoKeys.id] === toDoId)
 	if (!todo || todo === null) {
 		callback_error(toDoId)
 		return null
@@ -70,7 +65,7 @@ function completeToDoById(arr, toDoId) {
 }
 
 const deleteTodoById = (arr, toDoId) => {
-	const todoIndex = arr.findIndex(arr => arr[todoKeys.id] === toDoId)
+	const todoIndex = arr.findIndex(arr => arr[toDoKeys.id] === toDoId)
 	if (todoIndex === -1) {
 		return null
 	}
@@ -79,9 +74,37 @@ const deleteTodoById = (arr, toDoId) => {
 }
 
 const handleCreateToDo = (arr, text) => {
-	return createTodoElement(createTodo(arr, text))
+	const todo = createTodo(arr, text)
+	const todoElement = createTodoElement(todo)
+	todosList.prepend(todoElement)
 }
 
-buttonEl.addEventListener('click', () => {
-	handleCreateToDo(todos, input.value)
+// Код
+
+formElement.addEventListener('submit', e => {
+	e.preventDefault()
+	if (!input.value.trim()) return
+	handleCreateToDo(todos, input.value.trim())
+	input.value = ''
 })
+
+buttonEl.addEventListener('click', () => {
+	if (!input.value.trim()) return
+	handleCreateToDo(todos, input.value.trim())
+	input.value = ''
+})
+
+todosList.addEventListener('click', ( { target } ) => {
+  const todo = target.closest('.todo')
+  const todoDataId = Number(todo.dataset.id)
+	if (target.matches('.button-complete')) {
+    todo.classList.toggle('completed')  
+    completeToDoById(todos, todoDataId)
+  } else if (target.classList.contains('button-delete')) {
+    deleteTodoById(todos,todoDataId)
+    todo.remove()
+  } else {
+    return
+  }
+})
+
