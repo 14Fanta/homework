@@ -1,0 +1,44 @@
+.swiper-wrapper {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform var(--transition-time) ease;
+  cursor:grab;
+  -webkit-user-select: none;
+  -moz-user-select: none;    
+  -ms-user-select: none;     
+  user-select: none;
+}
+
+.how-to-buy__swiper-slide {
+  display: flex;
+  margin-right: 93px;
+  flex-shrink: 0;
+  filter: brightness(40%);
+  transition-property: transform, filter;
+  transition-duration: var(--transition-time);
+}
+
+.how-to-buy__swiper-slide--active {
+  filter: brightness(100%);
+  position: static;
+  transform: translate(0);
+}
+
+.how-to-buy__swiper-number--active {
+  display: inline-block;
+  visibility: visible;
+}
+
+.how-to-buy__swiper-number__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 18px;
+  line-height: 48px;
+  width: 61px;
+  height: 61px;
+  background-color: var(--accent-color);
+}
