@@ -1,222 +1,100 @@
+// IMPORTS
 import { error as err } from "../error-code.js";
 
+// MAIN CODE
 export const initCode = () => {
+  const swiperSlides = Array.from(document.querySelectorAll(".how-to-buy__swiper-slide"));
   const wrapper = document.querySelector(".how-to-buy__wrapper");
-  const track = document.querySelector(".swiper-wrapper.how-to-buy__swiper-wrapper");
-  const slides = Array.from(document.querySelectorAll(".swiper-slide.how-to-buy__swiper-slide"));
-  const numbers = Array.from(document.querySelectorAll(".how-to-buy__swiper-number"));
-  const activeNumberEl = document.querySelector("#swiper__activeNumber");
-  const allSlidesEl = document.querySelector("#swiper__allSlides");
-  const btnPrev = document.querySelector(".how-to-buy__btn--prev");
-  const btnNext = document.querySelector(".how-to-buy__btn--next");
+  const SWIPER_WRAPPER = document.querySelector(".swiper-wrapper");
+  const activeNumber = document.querySelector("#swiper__activeNumber");
+  const ALL_SLIDES = document.querySelector("#swiper__allSlides");
+  const numberNotActive = Array.from(document.querySelectorAll(".how-to-buy__swiper-number"));
 
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
-  let isMouseDown = false;
-
-  // Размеры для расчёта
-  let slideWidth = 0;
-  let marginRight = 0;
-
-  function measure() {
-    const firstSlide = slides[0];
-    if (!firstSlide) return;
-    const style = window.getComputedStyle(firstSlide);
-    slideWidth = firstSlide.offsetWidth;
-    marginRight = parseFloat(style.marginRight) || 0;
-  }
-  measure();
-  window.addEventListener("resize", measure);
-
-  // Считаем, к какому слайду «прилипнуть»
-  function getNearestIndex(offset) {
-    const step = slideWidth + marginRight;
-    const positions = slides.map((_, i) => -(i * step));
-
-    let nearestIndex = 0;
-    let minDiff = Infinity;
-
-    positions.forEach((pos, i) => {
-      const diff = Math.abs(pos - offset);
-      if (diff < minDiff) {
-        minDiff = diff;
-        nearestIndex = i;
-      }
-    });
-
-    return nearestIndex;
-  }
-
-  // Применяем позицию и обновляем активный класс
-  function setPosition(index) {
-    const step = slideWidth + marginRight;
-    const offset = -(index * step);
-
-    track.style.transform = `translateX(${offset}px)`;
-
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("how-to-buy__swiper-slide--active", i === index);
-    });
-  }
-
-  // Плавное «прилипание» к ближайшему слайду
-  function snapToNearest() {
-    const currentTransform = window.getComputedStyle(track).transform;
-    const matrix = new DOMMatrix(currentTransform);
-    const currentOffset = matrix.m41; // translateX
-
-    const nearestIndex = getNearestIndex(currentOffset);
-    setPosition(nearestIndex);
-  }
-
-  // --- Свайп (touch) ---
-  track.addEventListener(
-    "touchstart",
-    (e) => {
-      isDragging = true;
-      startX = e.touches[0].clientX;
-      currentX = window.getComputedStyle(track).transform
-        ? new DOMMatrix(window.getComputedStyle(track).transform).m41
-        : 0;
-    },
-    { passive: false },
-  );
-
-  track.addEventListener(
-    "touchmove",
-    (e) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      const x = e.touches[0].clientX;
-      const diff = x - startX;
-      track.style.transform = `translateX(${currentX + diff}px)`;
-    },
-    { passive: false },
-  );
-
-  track.addEventListener("touchend", () => {
-    isDragging = false;
-    snapToNearest();
-  });
-
-  // --- Drag мышью ---
-  track.addEventListener("mousedown", (e) => {
-    isMouseDown = true;
-    startX = e.clientX;
-    currentX = window.getComputedStyle(track).transform
-      ? new DOMMatrix(window.getComputedStyle(track).transform).m41
-      : 0;
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.clientX;
-    const diff = x - startX;
-    track.style.transform = `translateX(${currentX + diff}px)`;
-  });
-
-  document.addEventListener("mouseup", () => {
-    isMouseDown = false;
-    snapToNearest();
-  });
-
-  // --- Кнопки ---
-  if (btnPrev) {
-    btnPrev.addEventListener("click", () => {
-      const currentTransform = window.getComputedStyle(track).transform;
-      const matrix = new DOMatrix(currentTransform);
-      const currentOffset = matrix.m41;
-      const step = slideWidth + marginRight;
-
-      let currentIndex = 0;
-      slides.forEach((_, i) => {
-        const pos = -(i * step);
-        if (Math.abs(pos - currentOffset) < 1) currentIndex = i;
-      });
-
-      const nextIndex = Math.max(0, currentIndex - 1);
-      setPosition(nextIndex);
-    });
-  }
-
-  if (btnNext) {
-    btnNext.addEventListener("click", () => {
-      const currentTransform = window.getComputedStyle(track).transform;
-      const matrix = new DOMatrix(currentTransform);
-      const currentOffset = matrix.m41;
-      const step = slideWidth + marginRight;
-
-      let currentIndex = 0;
-      slides.forEach((_, i) => {
-        const pos = -(i * step);
-        if (Math.abs(pos - currentOffset) < 1) currentIndex = i;
-      });
-
-      const nextIndex = Math.min(slides.length - 1, currentIndex + 1);
-      setPosition(nextIndex);
-    });
-  }
-
-  if (!wrapper || !track || slides.length === 0) {
-    console.warn("Слайдер не инициализирован: не найдены элементы.");
+  if (!wrapper || !SWIPER_WRAPPER || !activeNumber || !ALL_SLIDES) {
+    console.warn("how-to-buy slider: не найдены обязательные элементы");
     return;
   }
 
-  let currentIndex = 2;
-
-  if (activeNumberEl) activeNumberEl.textContent = currentIndex + 1;
-  if (allSlidesEl) allSlidesEl.textContent = slides.length;
+  let activeSlideIndex = 2; 
+  
+  activeNumber.textContent = activeSlideIndex + 1;
+  ALL_SLIDES.textContent = swiperSlides.length;
 
   function recalculateAndCenter() {
-    const firstSlide = slides[0];
-    const style = window.getComputedStyle(firstSlide);
+    if (swiperSlides.length === 0 || !wrapper || !SWIPER_WRAPPER) return;
+
+    const slide = swiperSlides[0];
+    const style = window.getComputedStyle(slide);
     const marginRight = parseFloat(style.marginRight) || 0;
-    const slideWidth = firstSlide.offsetWidth;
+    const slideWidth = slide.offsetWidth;
     const containerWidth = wrapper.offsetWidth;
-
     const step = slideWidth + marginRight;
+    const offset = containerWidth / 2 - slideWidth / 2 - activeSlideIndex * step;
 
-    const offset = containerWidth / 2 - slideWidth / 2 - currentIndex * step;
-
-    track.style.transform = `translateX(${offset}px)`;
+    SWIPER_WRAPPER.style.transform = `translateX(${offset}px)`;
   }
 
   function updateActiveClasses() {
-    slides.forEach((slider) => slider.classList.remove("how-to-buy__swiper-slide--active"));
-    numbers.forEach((number) => number.classList.remove("how-to-buy__swiper-number--active"));
+    
+    swiperSlides.forEach((el) => el.classList.remove("how-to-buy__swiper-slide--active"));
+    numberNotActive.forEach((el) => el.classList.remove("how-to-buy__swiper-number--active"));
 
-    if (slides[currentIndex]) slides[currentIndex].classList.add("how-to-buy__swiper-slide--active");
-
-    if (numbers[currentIndex]) numbers[currentIndex].classList.add("how-to-buy__swiper-number--active");
-
-    if (activeNumberEl) activeNumberEl.textContent = currentIndex + 1;
+    
+    if (swiperSlides[activeSlideIndex]) {
+      swiperSlides[activeSlideIndex].classList.add("how-to-buy__swiper-slide--active");
+    }
+    if (numberNotActive[activeSlideIndex]) {
+      numberNotActive[activeSlideIndex].classList.add("how-to-buy__swiper-number--active");
+    }
   }
 
   function slideNext() {
-    currentIndex++;
-    if (currentIndex >= slides.length) currentIndex = 0;
+    if (swiperSlides.length === 0) return err("Ошибка: нет слайдов!!!");
+
+    activeSlideIndex++;
+    if (activeSlideIndex >= swiperSlides.length) {
+      activeSlideIndex = 0; 
+    }
+
+    activeNumber.textContent = activeSlideIndex + 1;
     updateActiveClasses();
     recalculateAndCenter();
   }
 
   function slidePrev() {
-    currentIndex--;
-    if (currentIndex < 0) currentIndex = slides.length - 1;
+    if (swiperSlides.length === 0) return err("Ошибка: нет слайдов!!!");
+
+    activeSlideIndex--;
+    if (activeSlideIndex < 0) {
+      activeSlideIndex = swiperSlides.length - 1; 
+    }
+
+    activeNumber.textContent = activeSlideIndex + 1;
     updateActiveClasses();
     recalculateAndCenter();
   }
 
-  wrapper.addEventListener("click", ({ target: t }) => {
-    if (t.classList.contains("how-to-buy__slider__btn-next") || t.closest(".how-to-buy__slider__btn-next")) {
+  wrapper.addEventListener("touchstart", (e) => {
+    const touchStartX = e.touches[0].clientX;
+  });
+
+  wrapper.addEventListener("touchend", (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchDiff = touchEndX - touchStartX;
+  });
+
+  wrapper.addEventListener("click", ({ target }) => {
+    const isNext = target.classList.contains("how-to-buy__slider__btn-next") || target.closest(".how-to-buy__slider__btn-next");
+    const isPrev = target.classList.contains("how-to-buy__slider__btn-prev") || target.closest(".how-to-buy__slider__btn-prev");
+
+    if (isNext) {
       slideNext();
-    } else if (t.classList.contains("how-to-buy__slider__btn-prev") || t.closest(".how-to-buy__slider__btn-prev")) slidePrev();
+    } else if (isPrev) {
+      slidePrev();
+    }
   });
 
   window.addEventListener("resize", recalculateAndCenter);
-  window.addEventListener("load", recalculateAndCenter);
-
   recalculateAndCenter();
 };
 

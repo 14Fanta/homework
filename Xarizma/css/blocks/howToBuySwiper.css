@@ -4,7 +4,6 @@
   height: 100%;
   width: 100%;
   transition: transform var(--transition-time) ease;
-  cursor:grab;
   -webkit-user-select: none;
   -moz-user-select: none;    
   -ms-user-select: none;     
