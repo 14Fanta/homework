@@ -75,10 +75,10 @@
 
   .burger__menu-cross {
     display: none;
-    transition: all var(--transition-time);
   }
 
   .burger__menu-cross--open {
+    transform:translate(50%, -16%);
     display: inline-block;
   }
 
@@ -118,11 +118,10 @@
 
   .header__buttons-wrapper--open {
     position: fixed;
-    top: 300px;
+    top: 290px;
   }
 
   .header__info--open {
-    top: 0;
     top: 15%;
     width: 100%;
     z-index: var(--layer-4);

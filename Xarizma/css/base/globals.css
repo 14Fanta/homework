@@ -31,6 +31,7 @@ a {
 .page__body {
   background-color: var(--first-bg-color);
   min-width: 360px;
+  overflow-x:clip;
 }
 .container {
   width: min(var(--container-width), 100% - var(--container-padding) * 2);
