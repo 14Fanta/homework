@@ -1,4 +1,10 @@
 @import url(../base/vars.css);
+.hero {
+  position: relative;
+  overflow-x: clip;
+  padding-top: 120px;
+
+}
 .hero__container,
 .hero__title {
 	display: -webkit-box;
@@ -9,10 +15,6 @@
 .hero__text,
 .hero__title {
 	text-transform: uppercase;
-}
-.hero {
-	position: relative;
-	overflow-x: clip;
 }
 .hero__container {
 	display: flex;

@@ -5,13 +5,12 @@
   width: 100%;
   transition: transform var(--transition-time) ease;
   -webkit-user-select: none;
-  -moz-user-select: none;    
-  -ms-user-select: none;     
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
 .how-to-buy__swiper-slide {
-  display: flex;
   margin-right: 93px;
   flex-shrink: 0;
   filter: brightness(40%);
@@ -21,8 +20,36 @@
 
 .how-to-buy__swiper-slide--active {
   filter: brightness(100%);
-  position: static;
-  transform: translate(0);
+}
+
+@media (width <= 902px) {
+  .swiper-wrapper {
+    justify-content: center;
+  }
+
+  div.how-to-buy__swiper-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .how-to-buy__swiper-slide {
+    margin-right: 0;
+    filter: brightness(100%);
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition-property: transform, filter;
+    transition-duration: var(--transition-time);
+  }
+
+  .how-to-buy__swiper-slide--active {
+    filter: brightness(100%);
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
 }
 
 .how-to-buy__swiper-number--active {

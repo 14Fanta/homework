@@ -53,10 +53,10 @@ export function innitCode() {
     elementName.classList.add(string);
   }
 
-  WRAPPER.addEventListener("click", ({ target }) => {
+  document.addEventListener("click", ({ target }) => {
     if (target.classList.contains("burger-menu")) {
-      initProggram();
-    } else if (target.matches(".burger__menu-cross--open")) {
+      initProggram()
+    } else if (target.matches(".burger__menu-cross--open") || target.matches('.header--open')) {
       deleteClassName();
     }
   });

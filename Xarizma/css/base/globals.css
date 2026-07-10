@@ -24,7 +24,6 @@ a {
 .page {
   font-family: var(--font-family);
   overflow-x: hidden;
-  overflow-y: auto;
   font-weight: 400;
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -324,6 +323,8 @@ button p {
   pointer-events: none;
 }
 
-body.no-scroll {
+.no-scroll{
+  height: 100vh;
   overflow: hidden;
+  scrollbar-gutter: stable;
 }

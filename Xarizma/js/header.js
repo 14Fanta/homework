@@ -1,28 +1,15 @@
-export default class HeaderFixed {
-  constructor(config) {
-    this.headerTypes = config;
-    this.header = document.querySelector(`.${this.headerTypes.HEADER}`);
-
-    if (!this.header) {
-      throw new Error("Header element is missing.");
-    }
-
-    this.initEvents();
-  }
-
-  initEvents() {
-    window.addEventListener("scroll", this.updateFixedClass.bind(this));
-  }
-
-  updateFixedClass() {
-    if (window.scrollY > 0) {
-      this.header.classList.add(this.headerTypes.HEADER_FIXED);
+export const headerFixed = () => {
+  const HEADER = document.querySelector(".header");
+  const CONTAINER = document.querySelector(".header__container");
+  
+  document.addEventListener("scroll", () => {
+    const HEIGHT = window.scrollY;
+    if (HEIGHT > 0) {
+      HEADER.classList.add("header--shadow");
     } else {
-      this.header.classList.remove(this.headerTypes.HEADER_FIXED);
+      HEADER.classList.remove("header--shadow");
     }
-  }
+  });
+};
 
-  removeFixedClass() {
-    this.header.classList.remove(this.headerTypes.HEADER_FIXED);
-  }
-}
+headerFixed();

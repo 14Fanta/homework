@@ -7,7 +7,7 @@
   --second-bg-color: #131517;
   --dark-color: #000;
   --darkNotFull-color:131517;
-  --shadow-color: #000;
+  --shadow-color: rgb(5, 5, 5);
   --bg-icons: #ffffff12;
   --border-color: #393c43;
   --overlay: #33333371;
@@ -35,6 +35,7 @@
   --layer-2: 2;
   --layer-3: 3;
   --layer-4: 4;
+  --layer-5:5;
   --opactity-value: 0.75;
   --opactity-value-secondary: 0.85;
   --animation-time: 0.3s;
