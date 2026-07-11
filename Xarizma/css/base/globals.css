@@ -31,7 +31,7 @@ a {
 .page__body {
   background-color: var(--first-bg-color);
   min-width: 360px;
-  overflow-x:clip;
+  overflow-x: clip;
 }
 .container {
   width: min(var(--container-width), 100% - var(--container-padding) * 2);
@@ -292,13 +292,29 @@ img {
     opacity: var(--opactity-value);
   }
 }
-
 .buttons-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 24px;
 }
+@media (height <= 800px) {
+  .header__buttons-wrapper--open {
+    gap: 16px;
+  }
+
+  .button-rooms {
+    width: 204px;
+    height: 50px;
+  }
+  
+  .button-buy {
+    width: 204px;
+    height: 50px;
+  }
+  
+}
+
 .header__button-buy,
 .button-rooms,
 .phone-link,
@@ -318,14 +334,13 @@ img {
 
 button svg,
 button use,
-button span,
+button span.burger-menu__line,
 button img,
 button p {
   pointer-events: none;
 }
 
-.no-scroll{
+.no-scroll {
   height: 100vh;
   overflow: hidden;
-  scrollbar-gutter: stable;
 }

@@ -99,9 +99,14 @@
     display: inline-block;
     visibility: visible;
   }
+
   .header__location-btn {
     position: absolute;
-    bottom: 20px;
-    right: 82px;
+    right: 46px;
   }
+
+  .header__info{
+    width: 100%;
+  }
+
 }

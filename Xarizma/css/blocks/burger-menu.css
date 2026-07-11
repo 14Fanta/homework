@@ -20,15 +20,11 @@
     max-width: 162px;
   }
 
-  .header__logo-link--open {
-    position: fixed;
-  }
-
   .header__info {
-    position: fixed;
+    position: relative;
     margin-left: 19px;
-    transition-property: top,opacity,visibility;
-    transition-duration:var(--transition-time);
+    transition-property: top, opacity, visibility;
+    transition-duration: var(--transition-time);
   }
   .burger-menu__wrapper {
     position: fixed;
@@ -36,7 +32,7 @@
     left: 0;
     top: -100vh;
     opacity: 0;
-    visibility: hidden; 
+    visibility: hidden;
     background-color: var(--overlay);
     transition: all var(--transition-time);
     background-color: var(--bg-menu);
@@ -47,7 +43,7 @@
   .burger-menu__wrapper--open {
     top: 0;
     opacity: 1;
-    visibility: visible; 
+    visibility: visible;
   }
   .burger-menu,
   .burger__menu-cross {
@@ -78,7 +74,7 @@
   }
 
   .burger__menu-cross--open {
-    transform:translate(50%, -16%);
+    transform: translate(50%, -16%);
     display: inline-block;
   }
 
@@ -90,40 +86,53 @@
   }
   .header__phone-link--open {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
   .header__location-btn--open {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    position: absolute;
-    left: 0;
-    top: 100px;
+    position: static;
   }
 
   .header__container {
-    position: relative;
-    display: flex;
     align-items: flex-start;
     gap: 50px;
   }
 
   .header__buttons-wrapper--open,
   .header__container--open {
-    display: flex;
     flex-direction: column;
     z-index: var(--layer-4);
   }
 
-  .header__buttons-wrapper--open {
-    position: fixed;
-    top: 290px;
-  }
-
   .header__info--open {
-    top: 15%;
+    flex-direction: column;
+    gap: 46px;
     width: 100%;
     z-index: var(--layer-4);
+  }
+}
+
+@media (height <= 800px) {
+  @media (height <= 680px) {
+    .header__container--open {
+      gap: 25px;
+    }
+  }
+  @media (height <= 734px) {
+    .header__container--open {
+      gap: 32px;
+    }
+  }
+
+  .header__button-rooms--open,
+  .header__button-buy--open {
+    display: flex;
+  }
+
+  .button-rooms-text {
+    text-wrap: nowrap;
   }
 }
