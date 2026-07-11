@@ -1,1 +1,35 @@
-.modal__title-location{position:absolute;top:20px;right:23%}
+.modal__title-location {
+  position: absolute;
+  top: 20px;
+}
+
+@media (width > 520px) {
+  .modal__title-location {
+      right: 23%;
+    }
+
+  .modal__title-location {
+    font-size: 18px;
+  }
+
+  .modal__close-location {
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (width <= 520px) {
+  .modal__title-location {
+    right: 22%;
+  }
+
+  .modal__title-location {
+    font-size: 16px;
+  }
+
+  .modal__close-location {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
